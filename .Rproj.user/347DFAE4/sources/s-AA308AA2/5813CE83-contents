@@ -1,0 +1,3 @@
+data("nor_fullform_sent")
+
+nor_fullform_sent$negative
