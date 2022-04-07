@@ -34,8 +34,10 @@ The data are structured as follows:
 
 | Token form | Sentiment | POS |
 |:---------- |:----------|:----|
-|Fullform<br>| Positive  |     |
-|            | Negative  |     |
+| Fullform    | Positive <br> Negative |TBD|
+| Lemma      | Positive <br><br><br><br> Negative  |  adjective <br> noun <br> participle adjective <br> verb <br> adjective <br> noun <br> participle adjective <br> verb |
+
+
 
 ### Fullform
 
@@ -45,8 +47,11 @@ These can be extracted by name after loading the data into R (see above):
 
 ```r
 
-nor_fullform_sent$positive |> head()
-nor_fullform_sent$negative |> head()
+nor_fullform_sent$positive |> 
+  head()
+
+nor_fullform_sent$negative |> 
+  head()
 
 ```
 ### Lemma
@@ -61,10 +66,18 @@ names(nor_lemma_sent)
 
 ```
 
-These can also be extracted by calling the
+These lexicons can also be extracted by calling the names within the list:
+
+```r
+
+nor_lemma_sent$lemma_noun_positive |> 
+  tail()
+
+```
 
 ## References
+
 Barnes et al. (2019) Lexicon information in neural sentiment analysis: a
 multi-task learning approach. Proceedings of the 22nd Nordic Conference on
-Computational Linguistics. Turku, Finland [ACL
-Anthology](https://www.aclweb.org/anthology/W19-6119/)
+Computational Linguistics. Turku, Finland 
+[ACL Anthology](https://www.aclweb.org/anthology/W19-6119/)
