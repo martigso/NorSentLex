@@ -13,7 +13,10 @@ The package can be installed by using the `install_github()` function from the
 ```r
 
 devtools::install.github("martigso/NorSentLex")
+library(NorSentLex)
 
+?nor_fullform_sent
+?nor_lemma_sent
 ```
 
 ## Structure and usage
