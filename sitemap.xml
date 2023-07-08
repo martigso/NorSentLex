@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://martigso.github.io/NorSentLex/404.html</loc>
+  </url>
+  <url>
+    <loc>https://martigso.github.io/NorSentLex/authors.html</loc>
+  </url>
+  <url>
+    <loc>https://martigso.github.io/NorSentLex/index.html</loc>
+  </url>
+  <url>
+    <loc>https://martigso.github.io/NorSentLex/reference/index.html</loc>
+  </url>
+  <url>
+    <loc>https://martigso.github.io/NorSentLex/reference/nor_fullform_pos_sent_negative.html</loc>
+  </url>
+  <url>
+    <loc>https://martigso.github.io/NorSentLex/reference/nor_fullform_pos_sent_positive.html</loc>
+  </url>
+  <url>
+    <loc>https://martigso.github.io/NorSentLex/reference/nor_fullform_sent.html</loc>
+  </url>
+  <url>
+    <loc>https://martigso.github.io/NorSentLex/reference/nor_lemma_sent.html</loc>
+  </url>
+</urlset>
