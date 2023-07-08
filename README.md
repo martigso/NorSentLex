@@ -1,17 +1,26 @@
-# NorSentLex
+
+# NorSentLex <img src="man/figures/norsentlex.png" align="right" width="120"/>
+
+<!-- badges: start -->
+<!-- [![CRAN Version](http://www.r-pkg.org/badges/version/stortingscrape)](https://cran.r-project.org/package=stortingscrape) -->
+
+[![Github
+Version](https://img.shields.io/github/r-package/v/martigso/NorSentLex?color=yellowgreen)](https://github.com/martigso/NorSentLex)
+<!-- [![Downloads](http://cranlogs.r-pkg.org/badges/stortingscrape)](https://cran.r-project.org/package=stortingscrape) -->
+<!-- [![Total Downloads](http://cranlogs.r-pkg.org/badges/grand-total/stortingscrape?color=orange)](https://cran.r-project.org/package=stortingscrape) -->
+<!-- [![R-CMD-check](https://github.com/martigso/stortingscrape/actions/workflows/check-standard.yaml/badge.svg)](https://github.com/martigso/stortingscrape/actions/workflows/check-standard.yaml) -->
+<!-- badges: end -->
 
 This repository is a R-format version of the [Norwegian sentiment
-lexicons](https://github.com/ltgoslo/norsentlex) as shown in Barnes et.al
-(2019). 
+lexicons](https://github.com/ltgoslo/norsentlex) as shown in Barnes
+et.al (2019).
 
 ## Installation
 
-The package can be installed by using the `install_github()` function from the 
-`devtools` package in R:
+The package can be installed by using the `install_github()` function
+from the `devtools` package in R:
 
-
-```r
-
+``` r
 devtools::install.github("martigso/NorSentLex")
 library(NorSentLex)
 
@@ -21,66 +30,74 @@ library(NorSentLex)
 
 ## Structure and usage
 
-The package mirrors the structure of the vanilla 
-[NorSentLex](https://github.com/ltgoslo/norsentlex) repository, but in a typical
-R type format. There are two available datasets: `nor_fullform_sent` and 
-`nor_lemma_sent`. These can be easily loaded in R:
+The package mirrors the structure of the vanilla
+[NorSentLex](https://github.com/ltgoslo/norsentlex) repository, but in a
+typical R type format. There are two available datasets:
+`nor_fullform_sent` and `nor_lemma_sent`. These can be easily loaded in
+R:
 
-```r
-
+``` r
 data("nor_fullform_sent", package = "NorSentLex")
 data("nor_lemma_sent", package = "NorSentLex")
-
 ```
 
 The data are structured as follows:
 
-| Token form | Sentiment | POS |
-|:---------- |:----------|:----|
-| Fullform    | Positive <br> Negative |TBD|
-| Lemma      | Positive <br><br><br><br> Negative  |  adjective <br> noun <br> participle adjective <br> verb <br> adjective <br> noun <br> participle adjective <br> verb |
-
-
+| Token form | Sentiment                          | POS                                                                                                                  |
+|:-----------|:-----------------------------------|:---------------------------------------------------------------------------------------------------------------------|
+| Fullform   | Positive <br> Negative             | TBD                                                                                                                  |
+| Lemma      | Positive <br><br><br><br> Negative | adjective <br> noun <br> participle adjective <br> verb <br> adjective <br> noun <br> participle adjective <br> verb |
 
 ### Fullform
 
-The fullform data contains a list with one element ("positive") of 6103 positive
-fullform tokens and one element ("negative") of 14839 negative fullform tokens.
-These can be extracted by name after loading the data into R (see above):
+The fullform data contains a list with one element (“positive”) of 6103
+positive fullform tokens and one element (“negative”) of 14839 negative
+fullform tokens. These can be extracted by name after loading the data
+into R (see above):
 
-```r
-
+``` r
 nor_fullform_sent$positive |> 
   head()
+```
 
+    ## [1] "absolutt"    "absolutta"   "absolutte"   "absoluttene" "absolutter" 
+    ## [6] "absoluttet"
+
+``` r
 nor_fullform_sent$negative |> 
   head()
-
 ```
+
+    ## [1] "abnorm"   "abnorme"  "abnormt"  "abort"    "aborten"  "abortene"
+
 ### Lemma
 
-The lemmatized part of the data contain a list element for positive and negative 
-lexicons for each of the following parts-of-speech: adjective, noun, 
-participle adjective, and verb:
+The lemmatized part of the data contain a list element for positive and
+negative lexicons for each of the following parts-of-speech: adjective,
+noun, participle adjective, and verb:
 
-```r
-
+``` r
 names(nor_lemma_sent)
-
 ```
 
-These lexicons can also be extracted by calling the names within the list:
+    ## [1] "lemma_adj_negative"  "lemma_adj_positive"  "lemma_noun_negative"
+    ## [4] "lemma_noun_positive" "lemma_padj_negative" "lemma_padj_positive"
+    ## [7] "lemma_verb_negative" "lemma_verb_positive"
 
-```r
+These lexicons can also be extracted by calling the names within the
+list:
 
+``` r
 nor_lemma_sent$lemma_noun_positive |> 
   tail()
-
 ```
+
+    ## [1] "åpenbaring" "ærbødighet" "ære"        "ærlighet"   "økning"    
+    ## [6] "ønske"
 
 ## References
 
-Barnes et al. (2019) Lexicon information in neural sentiment analysis: a
-multi-task learning approach. Proceedings of the 22nd Nordic Conference on
-Computational Linguistics. Turku, Finland 
-[ACL Anthology](https://www.aclweb.org/anthology/W19-6119/)
+Barnes et al. (2019) Lexicon information in neural sentiment analysis: a
+multi-task learning approach. Proceedings of the 22nd Nordic Conference
+on Computational Linguistics. Turku, Finland [ACL
+Anthology](https://www.aclweb.org/anthology/W19-6119/)
