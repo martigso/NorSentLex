@@ -2,7 +2,7 @@ Package: NorSentLex
 Type: Package
 Title: Norwegian sentiment lexicon of positive and negative words
 Version: 0.1.0
-Authors@R: person("Martin", "Soyland", email = "martin.soyland@stv.uio.no",
+Authors@R: person("Martin", "Søyland", email = "martin.soyland@stv.uio.no",
                   role = c("aut", "cre"))
 Description: This R-package contains a Norwegian sentiment lexicon of positive 
              and negative words, base on the NorSentLex (Barnes et.al, 2019).
