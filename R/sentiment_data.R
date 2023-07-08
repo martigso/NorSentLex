@@ -30,7 +30,7 @@
 #' head(sent_neg)
 "nor_fullform_sent"
 
-#' Norwegian sentiment dictionary in fullform
+#' Norwegian sentiment dictionary in lemmatized form
 #'
 #' Data containting sentiment dictionaries for positive and negative lemma
 #' tokens in Norwegian, based on the _Sentiment Analysis for Norwegian Text_

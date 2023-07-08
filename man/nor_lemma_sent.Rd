@@ -3,7 +3,7 @@
 \docType{data}
 \name{nor_lemma_sent}
 \alias{nor_lemma_sent}
-\title{Norwegian sentiment dictionary in fullform}
+\title{Norwegian sentiment dictionary in lemmatized form}
 \format{
 An object of class \code{\link[base]{list}} containing one character
 vector for positive and negative lemma tokens across different types of
