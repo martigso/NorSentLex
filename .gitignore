@@ -42,3 +42,4 @@ vignettes/*.pdf
 # Make sent data script
 R/make_sent_data.R
 R/hexbadge.R
+docs
