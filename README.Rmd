@@ -12,7 +12,6 @@ output: github_document
 <!-- [![R-CMD-check](https://github.com/martigso/stortingscrape/actions/workflows/check-standard.yaml/badge.svg)](https://github.com/martigso/stortingscrape/actions/workflows/check-standard.yaml) -->
 <!-- badges: end -->
 
-
 This repository is a R-format version of the [Norwegian sentiment lexicons](https://github.com/ltgoslo/norsentlex) as shown in Barnes et.al (2019). 
 
 ## Installation
@@ -22,7 +21,7 @@ The package can be installed by using the `install_github()` function from the `
 
 ```{r, eval=FALSE}
 
-devtools::install.github("martigso/NorSentLex")
+devtools::install_github("martigso/NorSentLex")
 library(NorSentLex)
 
 ?nor_fullform_sent

@@ -21,7 +21,7 @@ The package can be installed by using the `install_github()` function
 from the `devtools` package in R:
 
 ``` r
-devtools::install.github("martigso/NorSentLex")
+devtools::install_github("martigso/NorSentLex")
 library(NorSentLex)
 
 ?nor_fullform_sent
